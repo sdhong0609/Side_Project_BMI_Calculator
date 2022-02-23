@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BMI 계산기</string>
+
+    <string name="label_bmi">비만도(BMI)란?</string>
+    <string name="description_bmi">체질량지수(BMI = body mass index)는 카우프지수로 비만을 평가하는 지수이며 세계적으로 쓰이는 공통표준 지수입니다.\n체지방의 정도를 표준체중보다 비교적 정확하게 반영할 수 있고 매우 간단히 규정할 수 있는 장점이 있습니다.</string>
+    <string name="label_how_to_calculate_bmi">비만도의 산출방법</string>
+    <string name="description_how_to_calculate_bmi">체질량지수 = 체중(kg) / 키의 제곱(㎡)</string>
+    <string name="button_start">시작</string>
+
+    <string name="label_height">신장</string>
+    <string name="cm">cm</string>
+    <string name="label_weight">체중</string>
+    <string name="kg">kg</string>
+    <string name="button_next">확인</string>
+</resources>
