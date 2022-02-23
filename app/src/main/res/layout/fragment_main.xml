@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout_cm">
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AfffppCompatTextView
             android:id="@+id/textView_label_weight"
             style="@style/Text.HeadStyle"
             android:layout_width="wrap_content"
