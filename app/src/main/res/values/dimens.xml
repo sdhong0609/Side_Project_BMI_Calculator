@@ -10,4 +10,11 @@
     <!-- margin size -->
     <dimen name="margin_size_16dp">16dp</dimen>
 
+    <!-- padding size -->
+    <dimen name="padding_size_8dp">8dp</dimen>
+
+    <!-- width & height size -->
+    <dimen name="width_size_128dp">128dp</dimen>
+    <dimen name="height_size_52dp">52dp</dimen>
+
 </resources>
