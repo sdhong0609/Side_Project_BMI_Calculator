@@ -11,5 +11,5 @@
     <string name="cm">cm</string>
     <string name="label_weight">체중</string>
     <string name="kg">kg</string>
-    <string name="button_next">확인</string>
+    <string name="button_check_result">확인</string>
 </resources>

@@ -1,83 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayout_cm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/linearLayout_kg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <data>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_label_height"
-            style="@style/Text.HeadStyle"
+        <variable
+            name="mainFragment"
+            type="com.hongstudio.bmi_calculator.MainFragment" />
+
+        <variable
+            name="viewModel"
+            type="com.hongstudio.bmi_calculator.BMIViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainFragment">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayout_cm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_height" />
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/linearLayout_kg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_height"
-            style="@style/EdittextStyle"
-            android:layout_marginHorizontal="@dimen/margin_size_16dp"
-            android:background="@drawable/edit_text_selector" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_label_height"
+                style="@style/Text.HeadStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_height" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_cm"
-            style="@style/Text.HeadStyle"
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_height"
+                style="@style/EdittextStyle"
+                android:layout_marginHorizontal="@dimen/margin_size_16dp"
+                android:background="@drawable/edit_text_selector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_cm"
+                style="@style/Text.HeadStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cm" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayout_kg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cm" />
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/button_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout_cm">
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_label_weight"
+                style="@style/Text.HeadStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_weight" />
 
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editText_weight"
+                style="@style/EdittextStyle"
+                android:layout_marginHorizontal="@dimen/margin_size_16dp"
+                android:background="@drawable/edit_text_selector" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayout_kg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/button_next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout_cm">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_kg"
+                style="@style/Text.HeadStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kg" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_label_weight"
-            style="@style/Text.HeadStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_weight" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editText_weight"
-            style="@style/EdittextStyle"
-            android:layout_marginHorizontal="@dimen/margin_size_16dp"
-            android:background="@drawable/edit_text_selector" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_next"
+            style="@style/ButtonStyle"
+            android:text="@string/button_check_result"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout_kg" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView_kg"
-            style="@style/Text.HeadStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/kg" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_next"
-        style="@style/ButtonStyle"
-        android:text="@string/button_next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout_kg" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
