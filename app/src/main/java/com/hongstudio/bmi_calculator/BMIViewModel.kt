@@ -17,6 +17,10 @@ class BMIViewModel : ViewModel() {
     val bmi: LiveData<Double> get() = _bmi
 
     fun calculateBmi(height: String, weight: String) {
+        if (height.isEmpty() || weight.isEmpty()) {
+            _bmi.value = 0.0
+            return
+        }
         val tmpDouble = weight.toDouble() / ((height.toDouble()/100) * (height.toDouble()/100))
         _bmi.value = (tmpDouble * 10).roundToInt() / 10.0
     }

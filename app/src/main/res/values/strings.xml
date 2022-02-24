@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">BMI 계산기</string>
+    <string name="label_main_fragment">입력 화면</string>
+    <string name="label_result_fragment">결과 화면</string>
 
     <string name="label_bmi">비만도(BMI)란?</string>
     <string name="description_bmi">체질량지수(BMI = body mass index)는 카우프지수로 비만을 평가하는 지수이며 세계적으로 쓰이는 공통표준 지수입니다.\n체지방의 정도를 표준체중보다 비교적 정확하게 반영할 수 있고 매우 간단히 규정할 수 있는 장점이 있습니다.</string>
@@ -12,4 +14,6 @@
     <string name="label_weight">체중</string>
     <string name="kg">kg</string>
     <string name="button_check_result">확인</string>
+
+    <string name="toast_please_fill_in_the_blank">빈칸을 채워주세요</string>
 </resources>

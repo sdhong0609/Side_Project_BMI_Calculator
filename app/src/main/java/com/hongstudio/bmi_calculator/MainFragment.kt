@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
@@ -39,7 +40,14 @@ class MainFragment : Fragment() {
         }
 
         button_next.setOnClickListener {
-            sharedViewModel.calculateBmi(editText_height.text.toString(), editText_weight.text.toString())
+            val heightString = editText_height.text.toString()
+            val weightString = editText_weight.text.toString()
+            
+            if (heightString.isEmpty() || weightString.isEmpty()) {
+                Toast.makeText(context, getString(R.string.toast_please_fill_in_the_blank), Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            sharedViewModel.calculateBmi(heightString, weightString)
             findNavController().navigate(R.id.action_mainFragment_to_resultFragment)
         }
     }
